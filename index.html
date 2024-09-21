@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Discount</title>
+</head>
+<body>
+    <h1>Welcome to the Coffee Shop</h1>
+    <p id="discount-message"></p>
+
+    <script>
+        // Assigning default values
+        let age = 30; // Default age
+        let isStudent = false; // Default not a student
+
+        // Logic for discount
+        function getDiscount() {
+            let message;
+            
+            if (age >= 65) {
+                message = "You get a 10% discount";
+            } else if (isStudent && age >= 18 && age <= 25) {
+                message = "You get a 5% discount";
+            } else {
+                message = "No discount";
+            }
+
+            // Displaying the message on the page
+            document.getElementById("discount-message").textContent = message;
+        }
+
+        // Call the function to apply the discount logic
+        getDiscount();
+    </script>
+</body>
+</html>
